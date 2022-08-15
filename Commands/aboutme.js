@@ -17,7 +17,12 @@ module.exports = {
                     .setLabel('View My Code!')
                     .setURL('https://github.com/96kb/KiloBot')
                     .setStyle(ButtonStyle.Link)
-                    .setEmoji('🧑‍💻'))
+                    .setEmoji('🧑‍💻'),
+                 new ButtonBuilder()
+                .setLabel('Invite me to your server!')
+                 .setURL('https://discord.com/api/oauth2/authorize?client_id=1008811174801977494&permissions=2147534912&scope=bot%20applications.commands')
+                 .setStyle(ButtonStyle.Link)
+                 .setEmoji('🔗'))
         const Embed = new EmbedBuilder()
             .setTitle('About Me!')
             // .setDescription('About me and the bot!')
