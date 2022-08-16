@@ -1,5 +1,5 @@
 // Require the necessary discord.js classes
-const { Client, GatewayIntentBits, Collection } = require('discord.js');
+const { Client, GatewayIntentBits, Collection, ActivityType } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
 require('dotenv').config();
@@ -18,11 +18,13 @@ for (const file of commandFiles) {
     // Set a new item in the Collection
     // With the key as the command name and the value as the exported module
     client.commands.set(command.data.name, command);
+
 }
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
     console.log('Ready!');
+    client.user.setActivity('kids' , { type: ActivityType.Watching });
 });
 
 // Login to Discord with your client's token
